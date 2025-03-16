@@ -74,3 +74,60 @@ input:focus {
 img{
     border-radius: 60px;
 }
+
+.loader {
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 5;
+    background: 
+    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 0 50%,
+    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 50% 50%,
+    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 100% 50%;
+    ;
+    background-size: calc(100%/3) 100%;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    33% { background-size: calc(100%/3) 0, calc(100%/3) 100%, calc(100%/3) 100%;}
+    50% { background-size: calc(100%/3) 100%, calc(100%/3) 0, calc(100%/3) 100%;}
+    66% { background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0;}
+}
+
+.bubble {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: #383838;
+    box-shadow: #2a2a2a 0 8px 24px;
+    width: 80%;
+    text-align: left;
+}
+
+.bubble.user {
+    border-radius: 20px 2px 0 20px;
+    background-color: rgb(158, 252, 213);
+    margin-left: auto;
+}
+
+.bubble.assistant {
+    border-radius: 20px 20px 20px 0;
+    background-color: rgb(255, 247, 158);
+}
+
+.prompt-row {
+    width: 80%;
+    justify-self: center;
+}
+
+.prompt-button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #383838;
+    box-shadow: #2a2a2a 0 8px 24px;
+}
