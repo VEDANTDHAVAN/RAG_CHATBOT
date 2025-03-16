@@ -14,7 +14,9 @@
     "dotenv": "^16.4.7",
     "langchain": "^0.0.152",
     "next": "15.2.2",
+    "node-fetch": "^3.3.2",
     "openai": "^4.87.3",
+    "puppeteer": "^19.11.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "ts-node": "^10.9.2"
