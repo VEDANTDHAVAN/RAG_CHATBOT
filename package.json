@@ -12,6 +12,8 @@
   "dependencies": {
     "@ai-sdk/react": "^1.1.23",
     "@datastax/astra-db-ts": "^1.5.0",
+    "@smithy/protocol-http": "^5.0.1",
+    "@smithy/signature-v4": "^5.0.1",
     "ai": "^4.1.61",
     "cohere-ai": "^7.16.0",
     "dotenv": "^16.4.7",
@@ -19,7 +21,7 @@
     "next": "15.2.2",
     "node-fetch": "^3.3.2",
     "openai": "^4.87.3",
-    "puppeteer": "^19.11.1",
+    "puppeteer": "^24.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "ts-node": "^10.9.2"

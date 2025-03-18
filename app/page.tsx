@@ -26,7 +26,7 @@ const Home = () => {
       setChats(updatedChats);
       localStorage.setItem("chats", JSON.stringify(updatedChats));
     }
-  }, [messages, currentChatId]);
+  }, [messages, currentChatId, chats]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
@@ -63,6 +63,13 @@ const Home = () => {
           role: "assistant",
         };
         append(aiMessage);
+      } else if (data.outOfContext) {
+        const aiMessage: Message = {
+          id: crypto.randomUUID(),
+          content: "Out of Context Question.",
+          role: "assistant",
+        };
+        append(aiMessage);
       }
     } catch (error) {
       console.error("Error sending message:", error);
@@ -87,7 +94,7 @@ const Home = () => {
     <div className="app-container">
       <Navbar chats={chats} onNewChat={handleNewChat} onSelectChat={handleSelectChat} />
       <main className="chat-container">
-        <div className="logo"><Image src={RAG_Logo} width="50" alt="RAG_ChatBot_LOGO" className="chat-logo" /> <b>ContextAI</b></div>
+      <div className="logo"><Image src={RAG_Logo} width="50" alt="RAG_ChatBot_LOGO" className="chat-logo" /> <b>ContextAI</b></div>
         <section className="chat-box">
           {currentMessages.map((message) => (
             <Bubble key={message.id} message={message} />
