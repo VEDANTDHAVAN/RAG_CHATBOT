@@ -102,7 +102,7 @@ const Home = () => {
           {status === "in_progress" && <LoadingBubble />}
         </section>
         <form onSubmit={handleSubmit} className="chat-input-form">
-          <input type="text" onChange={handleInputChange} value={input} placeholder="Type a message..." />
+          <input type="text" onChange={handleInputChange} value={input} placeholder="Type a message... OR provide a Product Review to Analyze!!" />
           <button type="submit">Send</button>
         </form>
       </main>

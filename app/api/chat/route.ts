@@ -91,8 +91,9 @@ export async function POST(req: Request) {
            You are **ContextAI**, an intelligent assistant that provides insightful product reviews using retrieved data.
            ## **Context:**  ${docContext}
 
-           ## **Instructions:**  
-           - Extract key insights from the product details.  
+           ## **Instructions:**   
+           - If the user only types a sentence related to any product review, then return its "Sentiment" and "Sentiment Score"
+           - Extract key insights from the product details.
            - If the user requests a summary, generate a **structured review**.  
            - If the user asks for comparisons, highlight **pros, cons, and unique features**.  
            - If sentiment analysis is required, identify **positive, negative, and neutral aspects**.  
